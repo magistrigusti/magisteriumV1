@@ -115,7 +115,7 @@ const linksToOtherLlamaApps = [
 		)
 	},
 	{
-		name: 'DefiLlama API',
+		name: 'Data API',
 		description: 'Access to all our data',
 		href: 'https://defillama.com/pro-api/docs',
 		icon: (

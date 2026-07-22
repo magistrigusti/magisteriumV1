@@ -207,7 +207,12 @@ export async function getChainOverviewData({ chain }: { chain: string }): Promis
 				console.log('ERROR fetching raises data', err)
 				return null
 			}),
-			chain === 'All' ? Promise.resolve(null) : fetchJson(PROTOCOLS_TREASURY),
+			chain === 'All'
+				? Promise.resolve(null)
+				: fetchJson(PROTOCOLS_TREASURY).catch((err) => {
+						console.log('ERROR fetching treasury data', err)
+						return null
+				  }),
 			metadata.gecko_id
 				? fetchJson(
 						`https://pro-api.coingecko.com/api/v3/coins/${metadata.gecko_id}?tickers=true&community_data=false&developer_data=false&sparkline=false`,
