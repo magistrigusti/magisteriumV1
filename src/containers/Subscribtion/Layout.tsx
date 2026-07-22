@@ -11,7 +11,7 @@ export function SubscribeLayout({ children }) {
 	return (
 		<>
 			<Head>
-				<title>Subscribe - DefiLlama</title>
+				<title>Subscribe - Магистериум</title>
 				<link rel="icon" type="image/png" href="/favicon-32x32.png" />
 			</Head>
 			<SEO />
@@ -19,8 +19,8 @@ export function SubscribeLayout({ children }) {
 				<header className="sticky top-0 z-50 backdrop-blur-md border-b border-[#39393E]/40 bg-[#13141a]/80">
 					<div className="max-w-6xl xl:max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
 						<BasicLink href="/" className="flex items-center gap-3">
-							<img src="/llama.png" alt="DefiLlama" width={32} height={32} className="rounded-full" />
-							<span className="font-bold text-lg hidden sm:inline-block">DefiLlama</span>
+							<img src="/magisterium-logo.png" alt="Логотип Магистериума" width={32} height={32} />
+							<span className="font-bold text-lg hidden sm:inline-block">Магистериум</span>
 						</BasicLink>
 
 						<div className="flex items-center gap-4">
@@ -49,8 +49,8 @@ export function SubscribeLayout({ children }) {
 					<div className="max-w-6xl xl:max-w-7xl mx-auto">
 						<div className="flex flex-col md:flex-row items-center justify-between gap-6">
 							<div className="flex items-center gap-3">
-								<img src="/llama.png" alt="DefiLlama" width={28} height={28} className="rounded-full" />
-								<span className="font-bold">DefiLlama</span>
+								<img src="/magisterium-logo.png" alt="Логотип Магистериума" width={28} height={28} />
+								<span className="font-bold">Магистериум</span>
 							</div>
 
 							<div className="flex flex-wrap items-center justify-center gap-6 text-[#8a8c90]">
@@ -70,7 +70,7 @@ export function SubscribeLayout({ children }) {
 						</div>
 
 						<div className="mt-6 pt-6 border-t border-[#39393E]/40 flex flex-wrap items-center justify-center md:justify-between gap-4 text-xs text-[#8a8c90]">
-							<div>© {new Date().getFullYear()} DefiLlama. All rights reserved.</div>
+							<div>© {new Date().getFullYear()} Магистериум. All rights reserved.</div>
 							<div className="flex flex-wrap items-center gap-4">
 								<BasicLink href="/subscription/privacy-policy" className="hover:text-white transition-colors">
 									Privacy Policy

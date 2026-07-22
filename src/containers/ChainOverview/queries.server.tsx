@@ -95,7 +95,7 @@ export async function getChainOverviewData({ chain }: { chain: string }): Promis
 			number | null,
 			number | string,
 			number | null,
-			{ raises: Array<IRaises> },
+			{ raises: Array<IRaises> } | null,
 			Array<ITreasury> | null,
 			{
 				market_data?: {
@@ -203,7 +203,10 @@ export async function getChainOverviewData({ chain }: { chain: string }): Promis
 				: fetchJson(`${PROTOCOL_NEW_USERS_API}/chain$${metadata.name}`)
 						.then((data: Array<[number, number]>) => data?.[data?.length - 1]?.[1] ?? null)
 						.catch(() => null),
-			fetchJson(RAISES_API),
+			fetchJson(RAISES_API).catch((err) => {
+				console.log('ERROR fetching raises data', err)
+				return null
+			}),
 			chain === 'All' ? Promise.resolve(null) : fetchJson(PROTOCOLS_TREASURY),
 			metadata.gecko_id
 				? fetchJson(
@@ -277,7 +280,10 @@ export async function getChainOverviewData({ chain }: { chain: string }): Promis
 						return null
 				  })
 				: Promise.resolve(null),
-			getCexVolume(),
+			getCexVolume().catch((err) => {
+				console.log('ERROR fetching CEX volume', err)
+				return null
+			}),
 			chain === 'All'
 				? getETFData()
 						.then((data) => {
@@ -498,7 +504,7 @@ export async function getChainOverviewData({ chain }: { chain: string }): Promis
 		if (transactions != null) {
 			charts.push('Transactions')
 		}
-		if (chain === 'All') {
+		if (chain === 'All' && raisesData?.raises?.length) {
 			charts.push('Raises')
 		}
 		if (inflowsData?.netInflows != null) {

@@ -14,16 +14,17 @@ export const MobileNav = React.memo(function MobileNav() {
 
 	return (
 		<nav className="flex items-center z-10 gap-2 py-3 px-4 bg-[linear-gradient(168deg,#344179_3.98%,#445ed0_100%)] lg:hidden">
-			<BasicLink href="/" className="shrink-0 mr-auto">
+			<BasicLink href="/" className="shrink-0 mr-auto flex items-center gap-2">
 				<span className="sr-only">Navigate to Home Page</span>
 				<img
-					src="/defillama-press-kit/defi/PNG/defillama.png"
-					alt=""
+					src="/magisterium-logo.png"
+					alt="Логотип Магистериума"
 					height={36}
-					width={105}
-					className="object-contain object-left mr-auto"
+					width={36}
+					className="size-9 object-contain"
 					fetchPriority="high"
 				/>
+				<span className="font-bold tracking-tight">Магистериум</span>
 			</BasicLink>
 
 			{!router.pathname.startsWith('/yield') && !router.pathname.startsWith('/raises') ? (

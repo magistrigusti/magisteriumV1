@@ -9,8 +9,8 @@ import { capitalize } from 'lodash'
 import { useQuery } from '@tanstack/react-query'
 import { TagGroup } from '~/components/TagGroup'
 import { NETFLOWS_API } from '~/constants'
-import logoLight from '~/public/defillama-press-kit/defi/PNG/defillama-light-neutral.png'
-import logoDark from '~/public/defillama-press-kit/defi/PNG/defillama-dark-neutral.png'
+import logoLight from '~/public/magisterium-logo.png'
+import logoDark from '~/public/magisterium-logo.png'
 import { fetchJson } from '~/utils/async'
 
 echarts.use([BarChart, TooltipComponent, GridComponent, CanvasRenderer])

@@ -33,7 +33,7 @@ export function SubscribeLayout2({ children }) {
 	return (
 		<>
 			<Head>
-				<title>Subscribe - DefiLlama</title>
+				<title>Subscribe - Магистериум</title>
 				<link rel="icon" type="image/png" href="/favicon-32x32.png" />
 			</Head>
 			<SEO />

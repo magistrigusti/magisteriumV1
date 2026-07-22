@@ -91,10 +91,8 @@ export const SEO = ({
 
 		cardSrc.searchParams.append('footerURL', encodeURIComponent(windowURL))
 
-		// First url in images should always be the logo of defillama
-		let images = nftPage
-			? [`https://defillama.com/defillama-press-kit/nft/SVG/defillama-nft.svg`]
-			: [`https://defillama.com/defillama-press-kit/defi/SVG/defillama.svg`]
+		// The first image is the Magisterium brand mark.
+		let images = windowURL ? [`${new URL(windowURL).origin}/magisterium-logo.png`] : []
 
 		// chain and token props are used to get logo, if the logo url isn't available in the data of that page
 		if (logo) {
@@ -131,14 +129,15 @@ export const SEO = ({
 		stablePage
 	])
 
-	let pageTitle = 'DefiLlama'
-	let pageDescription = "DefiLlama is a DeFi TVL aggregator. It is committed to providing accurate data without ads or sponsored content, as well as transparency.";
+	let pageTitle = 'Магистериум'
+	let pageDescription =
+		'Магистериум — независимый интерфейс для исследования открытых данных о децентрализованных финансах.'
 	let pageKeywords = ''
 
 	if (unlockPage && cardName) {
-		pageTitle = `${cardName} ${symbol} Token Unlocks & Vesting Schedules - DefiLlama`
-		pageDescription = `Track upcoming ${cardName} token unlocks, detailed vesting schedules, and key emission data on DefiLlama. Stay informed on ${symbol} release events and supply changes.`
-		pageKeywords = `${cardName} ${symbol} token unlocks, vesting schedules, emission data, DefiLlama, ${symbol}, ${cardName}, ${symbol} Tokenomics, ${symbol} Unlocks, ${symbol} Vesting Schedule, ${cardName} Unlocks, ${cardName} Vesting Schedule, ${cardName} Tokenomics`
+		pageTitle = `${cardName} ${symbol} Token Unlocks & Vesting Schedules - Магистериум`
+		pageDescription = `Track upcoming ${cardName} token unlocks, detailed vesting schedules, and key emission data on Магистериум. Stay informed on ${symbol} release events and supply changes.`
+		pageKeywords = `${cardName} ${symbol} token unlocks, vesting schedules, emission data, Магистериум, ${symbol}, ${cardName}, ${symbol} Tokenomics, ${symbol} Unlocks, ${symbol} Vesting Schedule, ${cardName} Unlocks, ${cardName} Vesting Schedule, ${cardName} Tokenomics`
 	}
 
 	return (
@@ -155,7 +154,7 @@ export const SEO = ({
 			<meta property="og:title" content={pageTitle} />
 			<meta property="og:type" content="website" />
 			<meta property="og:url" content={windowURL} />
-			<meta property="og:site_name" content="DefiLlama" />
+			<meta property="og:site_name" content="Магистериум" />
 			<meta
 				property="og:description"
 				content={pageDescription}
@@ -163,11 +162,9 @@ export const SEO = ({
 			<meta property="og:image" content={cardURL} />
 
 			<meta name="twitter:card" content="summary_large_image" />
-			<meta property="twitter:domain" content="defillama.com" />
+			<meta property="twitter:domain" content={isClient ? window.location.hostname : ''} />
 			<meta property="twitter:url" content={windowURL} />
 			<meta name="twitter:title" content={pageTitle} />
-			<meta name="twitter:site" content="@DefiLlama" />
-			<meta name="twitter:creator" content="@DefiLlama" />
 			<meta
 				name="twitter:description"
 				content={pageDescription}

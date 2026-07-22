@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars*/
 import { useRouter } from 'next/router'
-import logoLight from '~/public/defillama-press-kit/defi/PNG/defillama-light-neutral.png'
-import logoDark from '~/public/defillama-press-kit/defi/PNG/defillama-dark-neutral.png'
+import logoLight from '~/public/magisterium-logo.png'
+import logoDark from '~/public/magisterium-logo.png'
 import { ECBasicOption } from 'echarts/types/dist/shared'
 import type { ISearchItem } from '~/components/Search/types'
 import { LIQUIDATIONS_HISTORICAL_R2_PATH } from '~/constants'

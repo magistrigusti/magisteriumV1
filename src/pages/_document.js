@@ -4,6 +4,11 @@ export default function Document() {
 	return (
 		<Html lang="en">
 			<Head>
+				<link rel="icon" href="/favicon.ico" sizes="any" />
+				<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+				<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+				<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+				<link rel="manifest" href="/site.webmanifest" />
 				<link href="/fonts/inter.woff2" rel="preload" as="font" crossOrigin="anonymous" />
 				<link href="/fonts/jetbrains.ttf" rel="preload" as="font" crossOrigin="anonymous" />
 				<link href="/icons/v4.svg" rel="prefetch" as="image" type="image/svg+xml" crossOrigin="anonymous" />

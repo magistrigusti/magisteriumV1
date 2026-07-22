@@ -319,7 +319,7 @@ const demoTextCard: TextConfig = {
 - **Tables**: Protocol rankings and data tables
 - **Text Cards**: Documentation and insights
 
-*Built with DefiLlama Pro Dashboard*`,
+*Built with Магистериум Pro Dashboard*`,
 	colSpan: 1
 }
 

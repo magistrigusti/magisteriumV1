@@ -47,8 +47,8 @@ export function ProDashboardLoader() {
 				<div className="absolute inset-0 flex items-center justify-center">
 					<div className="relative">
 						<img
-							src="/llama.png"
-							alt="Loading"
+							src="/magisterium-logo.png"
+							alt="Магистериум загружается"
 							className="w-16 h-16 object-contain animate-pulse"
 							style={{ animationDuration: '1.5s' }}
 						/>

@@ -21,24 +21,17 @@ export const DesktopNav = React.memo(function DesktopNav() {
 
 	return (
 		<nav className="z-10 fixed top-0 bottom-0 left-0 h-screen overflow-y-auto bg-(--app-bg) hidden lg:flex flex-col w-[244px] gap-1 p-4 pl-0 *:pl-4 no-scrollbar">
-			<BasicLink href="/" className="shrink-0">
+			<BasicLink href="/" className="shrink-0 flex items-center gap-3 mr-auto mb-4">
 				<span className="sr-only">Navigate to Home Page</span>
 				<img
-					src="/defillama-press-kit/defi/PNG/defillama.png"
-					height={53}
-					width={155}
-					className="object-contain object-left mr-auto mb-4 hidden dark:block"
-					alt=""
+					src="/magisterium-logo.png"
+					height={48}
+					width={48}
+					className="size-12 object-contain"
+					alt="Логотип Магистериума"
 					fetchPriority="high"
 				/>
-				<img
-					src="/defillama-press-kit/defi/PNG/defillama-dark.png"
-					height={53}
-					width={155}
-					className="object-contain object-left mr-auto mb-4 dark:hidden"
-					alt=""
-					fetchPriority="high"
-				/>
+				<span className="text-lg font-bold tracking-tight">Магистериум</span>
 			</BasicLink>
 
 			<div className="overflow-y-auto pb-32 no-scrollbar">

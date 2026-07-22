@@ -24,11 +24,15 @@ export default function Layout({
 	...props
 }: ILayoutProps) {
 	const isClient = useIsClient()
+	const brandedTitle = title.replace(/defi\s*llama/gi, 'Магистериум')
 	return (
 		<>
 			<Head>
-				<title>{title}</title>
+				<title>{brandedTitle}</title>
+				<link rel="icon" href="/favicon.ico" sizes="any" />
 				<link rel="icon" type="image/png" href="/favicon-32x32.png" />
+				<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+				<link rel="manifest" href="/site.webmanifest" />
 			</Head>
 
 			{defaultSEO ? <SEO /> : null}

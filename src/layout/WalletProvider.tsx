@@ -5,7 +5,7 @@ import { optimism } from 'wagmi/chains'
 import { ReactNode } from 'react'
 
 export const config = getDefaultConfig({
-	appName: 'DefiLlama',
+	appName: 'Магистериум',
 	projectId: 'abcbcfd99b02bb0d7057fc19b2f8a2ad',
 	chains: [optimism]
 })

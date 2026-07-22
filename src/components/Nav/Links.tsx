@@ -33,7 +33,7 @@ interface ILinks {
 export const defaultToolsAndFooterLinks = {
 	tools: [
 		{
-			name: 'DefiLlama Pro',
+			name: 'Магистериум Pro',
 			path: '/subscription',
 			newTag: true
 		},

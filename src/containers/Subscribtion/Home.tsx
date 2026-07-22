@@ -115,14 +115,14 @@ export function SubscribeHome({ returnUrl, isTrial }: { returnUrl?: string; isTr
 						className="h-[132px] w-[132px] aspect-square object-contain mx-auto rounded-full absolute z-0"
 					/>
 					<img
-						src="/llama.png"
+						src="/magisterium-logo.png"
 						height={118}
 						width={118}
 						className="aspect-square object-contain mx-auto rounded-full z-10"
-						alt=""
+						alt="Логотип Магистериума"
 					/>
 				</div>
-				<h1 className="text-[2rem] font-extrabold text-center">DefiLlama</h1>
+				<h1 className="text-[2rem] font-extrabold text-center">Магистериум</h1>
 				{isSubscribed ? null : (
 					<p className="text-[#919296] text-center">
 						Upgrade now for access to LlamaFeed, increased api limits and premium api endpoints.

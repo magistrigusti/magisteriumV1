@@ -40,7 +40,7 @@ export function EmbedChart({ color }: { color?: string }) {
 
 	const url = `<iframe width="640px" height="360px" src="https://defillama.com/chart${path}${extras.join(
 		'&'
-	)}" title="DefiLlama" frameborder="0"></iframe>`
+	)}" title="Магистериум" frameborder="0"></iframe>`
 
 	return (
 		<Ariakit.PopoverProvider>
