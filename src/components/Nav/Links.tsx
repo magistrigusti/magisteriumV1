@@ -65,7 +65,7 @@ export const defaultToolsAndFooterLinks = {
 			external: true
 		},
 		{
-			name: 'DefiLlama Extension',
+			name: 'Browser Extension',
 			path: 'https://chrome.google.com/webstore/detail/defillama/phgiabfbjodhgckcffppiboooeiecgeg',
 			external: true
 		},
